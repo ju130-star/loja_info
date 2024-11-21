@@ -1,0 +1,318 @@
+/* Reset de estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+/* Navbar */
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #120258;
+    padding: 20px 0;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a img {
+  width: 50px;
+  padding: 5px;
+}
+
+/* Carrossel */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 3s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 150px; /* Ajuste a altura do carrossel conforme necessário */
+    object-fit: cover;
+}
+
+/* Carrossel */
+  /* Estilo do container principal do carrossel */
+  .carrossel-container {
+    max-width: 100%;
+    overflow: hidden;  /* Esconde as imagens que estão fora da área visível */
+    position: relative;
+    margin: 0px;
+}
+  .carousel {
+    position: relative; /* Para posicionar os botões corretamente */
+    width: 80%;
+    max-width: 2300px;
+    overflow: hidden; /* Esconde as partes das imagens fora da área visível */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ao redor */
+  }
+  .carousel-item {
+    flex: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  /* Container das imagens, com layout flexível para alinhá-las horizontalmente */
+  .carousel-images {
+    display: flex; /* Organiza as imagens lado a lado */
+    transition: transform 0.5s ease-in-out; /* Animação suave para a transição */
+  }
+ 
+  /* Cada imagem ocupa 100% da largura do carrossel */
+  .carousel-images img {
+    width: 100%;
+    flex-shrink: 0; /* Evita que as imagens encolham */
+  }
+ 
+  /* Efeito ao passar o mouse sobre os botões */
+  button:hover {
+    background-color: #0056b3; /* Fundo mais escuro */
+  }
+ 
+  /* Botão para a esquerda */
+  .prev {
+    left: 10px; /* Posição à esquerda */
+  }
+ 
+  /* Botão para a direita */
+  .next {
+    right: 10px; /* Posição à direita */
+  }
+ 
+
+/* Produtos */
+.products {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 2200px; /* Define a largura total do grid */
+}
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px  rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: drop;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Faz com que os cards ajustem sua altura automaticamente */
+    align-items: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras mais fortes ao passar o mouse */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card h4 {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.card .btn {
+    padding: 10px;
+    background-color: #190769;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.card .btn:hover {
+    background-color: #2c2aa3;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+    .product-cards {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards por linha em telas menores */
+    }
+}
+
+@media (max-width: 900px) {
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards por linha em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    .product-cards {
+        grid-template-columns: 1fr; /* 1 card por linha em telas muito pequenas */
+    }
+}
+
+/* Detalhe do Produto */
+.product-detail {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.product-image img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product-info {
+    max-width: 500px;
+}
+
+.product-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.product-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-info .btn {
+    padding: 15px 20px;
+    background-color:  #190769;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.product-info .btn:hover {
+    background-color: #2c2aa3;
+}
+
+/* Cadastro */
+.signup {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.signup h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.signup form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup label {
+    font-size: 16px;
+    text-align: left;
+}
+
+.signup input[type="text"],
+.signup input[type="email"],
+.signup input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup button {
+    padding: 15px;
+    background-color: #190769;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.signup button:hover {
+    background-color: #2c2aa3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #120258;
+    color: white;
+    margin-top: 40px;
+}
