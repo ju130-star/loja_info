@@ -316,3 +316,37 @@ footer {
     color: white;
     margin-top: 40px;
 }
+ /* Responsividade */
+ @media (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+   
+  .product-list, .cart-items {
+    padding: 20px;
+  }
+  
+  .product, .cart-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background: #190769;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #2c2aa3;
+  }
